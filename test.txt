@@ -1,12 +1,10 @@
-//删除注释测试语句
-/*
-hahaha
-haha
-*/int a=2;
-int s/**/=2;
-int/**/ /**/main()  //主函数 
-{
-   //定义a 
-   int a=2;  
-   int b=3; //定义b 
+/*author=hxlong
+ *
+ */
+a3=8+9;
+b=7;
+print a3+b;
+c=a3+b;
+print a3*c+(6+7);
+int main(){
 }

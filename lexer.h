@@ -8,6 +8,8 @@
 #include <set>
 #include <cstring>
 #include <algorithm>
+#include<fstream>
+#include <cstdio>
 
 using namespace	std;
 typedef pair<int,string> PIS;   //´æ´¢¶şÔª×é 
@@ -22,7 +24,7 @@ void get_outname(string inputname, string &outputname); //µÃµ½Êä³öÎÄ¼şÃû
 
 bool note_process(string &str, bool &noteflag,string &errmsg);  //Ô¤´¦Àí,É¾³ı×Ö·û´®ÄÚ×¢ÊÍ 
 
-void print_to_file(FILE *fp ,vector<PIS> vTable);  //½«¶şÔª×éÊäÈëµ½ÖĞ¼äÎÄ¼şÖĞ
+void print_to_file(string outputname ,vector<PIS> vTable);  //½«¶şÔª×éÊäÈëµ½ÖĞ¼äÎÄ¼şÖĞ
  
 bool is_terminal_stage(int stage); //ÅĞ¶ÏÊÇ·ñÎªÖÕ½á½×¶Î
 
@@ -33,6 +35,8 @@ void add_pair(string str, vector<PIS> &vTable);  //½«µÃµ½µÄºÏ·¨×Ö·û´®¼ÓÈëµ½¶şÔªÊ
 bool excute( int &stage, char ch ); //½×¶Î×ª»»
 
 bool lineAnalyse( string &line, int &colNo, string &errmsg, vector<PIS> &vTable ); //ĞĞ´úÂë´Ê·¨·ÖÎö
+
+void errMsg( string filename, int rowNo,string errmsg );
 
 bool stage_0 ( int &stage, int chtype );//(*´Ó0-15¹²16¸ö×´Ì¬)
 bool stage_1 ( int &stage, int chtype );
